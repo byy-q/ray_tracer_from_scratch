@@ -1,3 +1,5 @@
+#ifndef CAMERA_HPP
+#define CAMERA_HPP
 #include "vector.hpp"
 #include <math.h>
 
@@ -23,7 +25,7 @@ class camera
         camera() =default;
         
         Ray get_ray(const double& u,const double& v)const{return Ray(look_from,left_down_corner + vertical*u + horizontal*v);}
-
+        vector3<double> look_FR()const{return look_from;}
   
     private:    
         vector3<double> look_from;
@@ -43,7 +45,8 @@ class camera
         vector3<double> horizontal; 
 };
 
-
+using pixel_num = std::uint32_t;
 
 
 }
+#endif

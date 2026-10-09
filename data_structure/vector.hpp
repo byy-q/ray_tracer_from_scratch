@@ -9,6 +9,7 @@
 #include <cstdint>
 #include <math.h>
 #include <type_traits>
+#include <iostream>
 namespace Ray_tracer
 {
 
@@ -45,11 +46,11 @@ class vector3
             return static_cast<double>(sqrt(x*x + y*y + z*z));
         }
 
-        template<typename U>
-        friend std::common_type_t<T,U> dot_product(const vector3<T>& _v1 ,const vector3<U>& _v2);
+        template<typename A,typename U>
+        friend std::common_type_t<A,U> dot_product(const vector3<A>& _v1 ,const vector3<U>& _v2);
 
-        template<typename U>
-        friend vector3<std::common_type_t<T,U>> cross_product(const vector3<T>& _v1,const vector3<U>& _v2);
+        template<typename A,typename U>
+        friend vector3<std::common_type_t<A,U>> cross_product(const vector3<A>& _v1,const vector3<U>& _v2);
 
         template<typename U>
         vector3<T>& operator+=(const vector3<U>& _v2)
@@ -110,6 +111,9 @@ class vector3
             double Length = __v.length();
             return vector3<T>(__v.x/Length,__v.y/Length,__v.z/Length);
         }
+        T __X()const{return x;}
+        T __Y()const{return y;}
+        T __Z()const{return z;}
     private:
         T x = 0;
         T y = 0;
@@ -117,18 +121,18 @@ class vector3
 
 };
 
-template<typename U,typename T>
-std::common_type_t<T,U> dot_product(const vector3<T>& _v1,const vector3<U>& _v2)
+template<typename A,typename U>
+std::common_type_t<A,U> dot_product(const vector3<A>& _v1,const vector3<U>& _v2)
 {
-    using result = std::common_type_t<T,U>;
+    using result = std::common_type_t<A,U>;
     return static_cast<result>(_v1.x)*static_cast<result>(_v2.x)+ static_cast<result>(_v1.y)*static_cast<result>(_v2.y)+ 
     static_cast<result>(_v1.z)*static_cast<result>(_v2.z);
 }
 
-template<typename U,typename T>       
-vector3<std::common_type_t<T,U>> cross_product(const vector3<T>& _v1,const vector3<U>& _v2)
+template<typename A,typename U>       
+vector3<std::common_type_t<A,U>> cross_product(const vector3<A>& _v1,const vector3<U>& _v2)
 {
-    using result = std::common_type_t<T,U>;
+    using result = std::common_type_t<A,U>;
     return vector3<result>(
         static_cast<result>(_v1.y) * static_cast<result>(_v2.z) - static_cast<result>(_v1.z) * static_cast<result>(_v2.y),
         static_cast<result>(_v1.z) * static_cast<result>(_v2.x) - static_cast<result>(_v1.x) * static_cast<result>(_v2.z),
@@ -198,20 +202,24 @@ class color
             return result;
         }
 
-        color& operator*=(const std::uint8_t& m)
+        color& operator*=(double m)
         {
-            red = red*m>255?255:red*m;
-            green = green*m>255?255:green*m;
-            blue = blue*m>255?255:blue*m;
+            red = m <= 0.0 ? 0 : (red * m >= 255.0 ? 255 : static_cast<std::uint16_t>(red * m));
+            green = m <= 0.0 ? 0 : (green * m >= 255.0 ? 255 : static_cast<std::uint16_t>(green * m));
+            blue = m <= 0.0 ? 0 : (blue * m >= 255.0 ? 255 : static_cast<std::uint16_t>(blue * m));
             return *this;
         }
-        friend color operator*(const color&__c1,const std::uint8_t& m)
+        friend color operator*(const color&__c1,double m)
         {
             color result = __c1;
             result *= m;
             return result;
         }
-
+        friend std::ostream& operator<<(std::ostream& os,const color& __color)
+        {
+            os<<__color.red<<" "<<__color.green<<" "<<__color.blue<<"\n";
+            return os;
+        }
     private:
         std::uint16_t red;
         std::uint16_t green;
