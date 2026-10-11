@@ -12,7 +12,7 @@
 #include <iostream>
 namespace Ray_tracer
 {
-
+class color;
 template<typename T = float>
 class vector3
 {
@@ -21,7 +21,7 @@ class vector3
         vector3() = default;
         vector3(const T& _X,const T& _Y,const T& _Z):x(_X),y(_Y),z(_Z){}
         ~vector3()=default;
-        
+    
         template<typename U>
         vector3(const vector3<U>& copy)
         {
@@ -160,6 +160,9 @@ class color
             else blue = value.x;
         }
 
+        template<typename> friend class vector3;
+
+
         color(const uint8_t& r,const uint8_t& g,const uint8_t& b):red(r),green(g),blue(b){}
         ~color()=default;
 
@@ -215,6 +218,31 @@ class color
             result *= m;
             return result;
         }
+        color& operator*=(const color& __co2){
+            red = red * __co2.red > 255?255:red*__co2.red;
+            green = green * __co2.green > 255?255:green*__co2.green;
+            blue = blue * __co2.blue > 255?255:blue*__co2.blue;
+            return *this;
+        }
+        friend color operator*(const color& __co1,const color& __co2)
+        {
+            color result = __co1;
+            result*=__co2;
+            return result;
+        }
+        color& operator*=(const vector3<double>& _albedo)
+        {
+            red *= _albedo.__X();
+            green *= _albedo.__Y();
+            blue *= _albedo.__Z();
+            return *this;
+        }
+        friend color operator*(const color& __co,const vector3<double>& m)
+        {
+            color result = __co;
+            result*=(m);
+            return result;
+        }
         friend std::ostream& operator<<(std::ostream& os,const color& __color)
         {
             os<<__color.red<<" "<<__color.green<<" "<<__color.blue<<"\n";
@@ -233,7 +261,7 @@ class Ray
         Ray(const vector3<double>& __origin,const vector3<double>& __direction):origin(__origin),direction(__direction){}
         vector3<double> __Origin()const{return origin;}
         vector3<double> __Direction()const{return direction;}
-        vector3<double> at_place_of(const double& t){
+        vector3<double> at_place_of(const double& t)const{
             return origin + direction*t;
         }
 
