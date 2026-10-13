@@ -3,10 +3,17 @@
 
 CMakeFiles/ray_tracer.dir/main.cpp.obj
  E:/delicate_render/main.cpp
+ D:/programdata/MinGW/include/c++/13.2.0/algorithm
+ D:/programdata/MinGW/include/c++/13.2.0/backward/auto_ptr.h
  D:/programdata/MinGW/include/c++/13.2.0/backward/binders.h
  D:/programdata/MinGW/include/c++/13.2.0/bit
+ D:/programdata/MinGW/include/c++/13.2.0/bits/algorithmfwd.h
+ D:/programdata/MinGW/include/c++/13.2.0/bits/align.h
  D:/programdata/MinGW/include/c++/13.2.0/bits/alloc_traits.h
+ D:/programdata/MinGW/include/c++/13.2.0/bits/allocated_ptr.h
  D:/programdata/MinGW/include/c++/13.2.0/bits/allocator.h
+ D:/programdata/MinGW/include/c++/13.2.0/bits/atomic_base.h
+ D:/programdata/MinGW/include/c++/13.2.0/bits/atomic_lockfree_defines.h
  D:/programdata/MinGW/include/c++/13.2.0/bits/basic_ios.h
  D:/programdata/MinGW/include/c++/13.2.0/bits/basic_ios.tcc
  D:/programdata/MinGW/include/c++/13.2.0/bits/basic_string.h
@@ -43,25 +50,41 @@ CMakeFiles/ray_tracer.dir/main.cpp.obj
  D:/programdata/MinGW/include/c++/13.2.0/bits/postypes.h
  D:/programdata/MinGW/include/c++/13.2.0/bits/predefined_ops.h
  D:/programdata/MinGW/include/c++/13.2.0/bits/ptr_traits.h
+ D:/programdata/MinGW/include/c++/13.2.0/bits/random.h
+ D:/programdata/MinGW/include/c++/13.2.0/bits/random.tcc
  D:/programdata/MinGW/include/c++/13.2.0/bits/range_access.h
  D:/programdata/MinGW/include/c++/13.2.0/bits/refwrap.h
  D:/programdata/MinGW/include/c++/13.2.0/bits/requires_hosted.h
+ D:/programdata/MinGW/include/c++/13.2.0/bits/shared_ptr.h
+ D:/programdata/MinGW/include/c++/13.2.0/bits/shared_ptr_atomic.h
+ D:/programdata/MinGW/include/c++/13.2.0/bits/shared_ptr_base.h
  D:/programdata/MinGW/include/c++/13.2.0/bits/specfun.h
  D:/programdata/MinGW/include/c++/13.2.0/bits/std_abs.h
+ D:/programdata/MinGW/include/c++/13.2.0/bits/stl_algo.h
  D:/programdata/MinGW/include/c++/13.2.0/bits/stl_algobase.h
+ D:/programdata/MinGW/include/c++/13.2.0/bits/stl_bvector.h
  D:/programdata/MinGW/include/c++/13.2.0/bits/stl_construct.h
  D:/programdata/MinGW/include/c++/13.2.0/bits/stl_function.h
+ D:/programdata/MinGW/include/c++/13.2.0/bits/stl_heap.h
  D:/programdata/MinGW/include/c++/13.2.0/bits/stl_iterator.h
  D:/programdata/MinGW/include/c++/13.2.0/bits/stl_iterator_base_funcs.h
  D:/programdata/MinGW/include/c++/13.2.0/bits/stl_iterator_base_types.h
+ D:/programdata/MinGW/include/c++/13.2.0/bits/stl_numeric.h
  D:/programdata/MinGW/include/c++/13.2.0/bits/stl_pair.h
+ D:/programdata/MinGW/include/c++/13.2.0/bits/stl_raw_storage_iter.h
+ D:/programdata/MinGW/include/c++/13.2.0/bits/stl_tempbuf.h
+ D:/programdata/MinGW/include/c++/13.2.0/bits/stl_uninitialized.h
+ D:/programdata/MinGW/include/c++/13.2.0/bits/stl_vector.h
  D:/programdata/MinGW/include/c++/13.2.0/bits/streambuf.tcc
  D:/programdata/MinGW/include/c++/13.2.0/bits/streambuf_iterator.h
  D:/programdata/MinGW/include/c++/13.2.0/bits/string_view.tcc
  D:/programdata/MinGW/include/c++/13.2.0/bits/stringfwd.h
+ D:/programdata/MinGW/include/c++/13.2.0/bits/uniform_int_dist.h
+ D:/programdata/MinGW/include/c++/13.2.0/bits/unique_ptr.h
  D:/programdata/MinGW/include/c++/13.2.0/bits/uses_allocator.h
  D:/programdata/MinGW/include/c++/13.2.0/bits/uses_allocator_args.h
  D:/programdata/MinGW/include/c++/13.2.0/bits/utility.h
+ D:/programdata/MinGW/include/c++/13.2.0/bits/vector.tcc
  D:/programdata/MinGW/include/c++/13.2.0/cctype
  D:/programdata/MinGW/include/c++/13.2.0/cerrno
  D:/programdata/MinGW/include/c++/13.2.0/clocale
@@ -75,8 +98,10 @@ CMakeFiles/ray_tracer.dir/main.cpp.obj
  D:/programdata/MinGW/include/c++/13.2.0/debug/assertions.h
  D:/programdata/MinGW/include/c++/13.2.0/debug/debug.h
  D:/programdata/MinGW/include/c++/13.2.0/exception
+ D:/programdata/MinGW/include/c++/13.2.0/ext/aligned_buffer.h
  D:/programdata/MinGW/include/c++/13.2.0/ext/alloc_traits.h
  D:/programdata/MinGW/include/c++/13.2.0/ext/atomicity.h
+ D:/programdata/MinGW/include/c++/13.2.0/ext/concurrence.h
  D:/programdata/MinGW/include/c++/13.2.0/ext/numeric_traits.h
  D:/programdata/MinGW/include/c++/13.2.0/ext/string_conversions.h
  D:/programdata/MinGW/include/c++/13.2.0/ext/type_traits.h
@@ -88,9 +113,16 @@ CMakeFiles/ray_tracer.dir/main.cpp.obj
  D:/programdata/MinGW/include/c++/13.2.0/istream
  D:/programdata/MinGW/include/c++/13.2.0/limits
  D:/programdata/MinGW/include/c++/13.2.0/math.h
+ D:/programdata/MinGW/include/c++/13.2.0/memory
  D:/programdata/MinGW/include/c++/13.2.0/new
+ D:/programdata/MinGW/include/c++/13.2.0/numeric
  D:/programdata/MinGW/include/c++/13.2.0/ostream
+ D:/programdata/MinGW/include/c++/13.2.0/pstl/execution_defs.h
+ D:/programdata/MinGW/include/c++/13.2.0/pstl/glue_algorithm_defs.h
+ D:/programdata/MinGW/include/c++/13.2.0/pstl/glue_memory_defs.h
+ D:/programdata/MinGW/include/c++/13.2.0/pstl/glue_numeric_defs.h
  D:/programdata/MinGW/include/c++/13.2.0/pstl/pstl_config.h
+ D:/programdata/MinGW/include/c++/13.2.0/random
  D:/programdata/MinGW/include/c++/13.2.0/stdexcept
  D:/programdata/MinGW/include/c++/13.2.0/stdlib.h
  D:/programdata/MinGW/include/c++/13.2.0/streambuf
@@ -112,6 +144,7 @@ CMakeFiles/ray_tracer.dir/main.cpp.obj
  D:/programdata/MinGW/include/c++/13.2.0/tuple
  D:/programdata/MinGW/include/c++/13.2.0/type_traits
  D:/programdata/MinGW/include/c++/13.2.0/typeinfo
+ D:/programdata/MinGW/include/c++/13.2.0/vector
  D:/programdata/MinGW/include/c++/13.2.0/x86_64-w64-mingw32/bits/atomic_word.h
  D:/programdata/MinGW/include/c++/13.2.0/x86_64-w64-mingw32/bits/basic_file.h
  D:/programdata/MinGW/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++allocator.h
@@ -124,6 +157,7 @@ CMakeFiles/ray_tracer.dir/main.cpp.obj
  D:/programdata/MinGW/include/c++/13.2.0/x86_64-w64-mingw32/bits/error_constants.h
  D:/programdata/MinGW/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h
  D:/programdata/MinGW/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h
+ D:/programdata/MinGW/include/c++/13.2.0/x86_64-w64-mingw32/bits/opt_random.h
  D:/programdata/MinGW/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h
  D:/programdata/MinGW/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h
  D:/programdata/MinGW/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h
@@ -172,8 +206,14 @@ CMakeFiles/ray_tracer.dir/main.cpp.obj
  D:/programdata/MinGW/x86_64-w64-mingw32/include/wctype.h
  E:/delicate_render/data_structure/camera.hpp
  E:/delicate_render/data_structure/vector.hpp
+ E:/delicate_render/hit_record.hpp
+ E:/delicate_render/material/material.hpp
+ E:/delicate_render/random.hpp
  E:/delicate_render/data_structure/camera.hpp
  E:/delicate_render/data_structure/vector.hpp
+ E:/delicate_render/light_source/light.hpp
  E:/delicate_render/objects/objects.hpp
  E:/delicate_render/objects/sphere.hpp
+ E:/delicate_render/objects/wall.hpp
+ E:/delicate_render/random.hpp
 

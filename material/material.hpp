@@ -6,7 +6,7 @@
 namespace Ray_tracer
 {
 
-    enum material_types {LAMBERTIAN};
+    enum material_types {LAMBERTIAN,MIRROR};
 class material
 {
     public:
@@ -14,7 +14,6 @@ class material
     virtual material_types type()const = 0;
     virtual vector3<double> Absorb()const = 0;
     virtual Ray scattered_ray(const Ray& incoming,std::shared_ptr<hit_record> ptr)const = 0;
-
 };
 
 class lambertian : public material
@@ -53,9 +52,37 @@ class lambertian : public material
             return Ray(ptr->hit_point + normal * 1e-4, direction);
         }
 
-
     private:
         vector3<double> albedo;       
+};
+
+class mirror : public material
+{
+public:
+
+    mirror():albedo({1.0,1.0,1.0}){}
+    mirror(const vector3<double>& al):albedo(al){}
+    virtual material_types type()const {
+        return material_types::MIRROR;
+    }
+    virtual vector3<double> Absorb()const 
+    {
+        return albedo;
+    }
+    virtual Ray scattered_ray(const Ray& incoming,std::shared_ptr<hit_record> ptr)const
+    {
+        vector3<double> normal = ptr->normal_vector;
+        if(dot_product(incoming.__Direction(),normal) > 0)
+        {
+            normal *= -1.0;
+        }
+
+        vector3<double> direction = incoming.__Direction() - normal*2.0*dot_product(incoming.__Direction(),normal);
+        return Ray(ptr->hit_point + normal * 1e-4,direction);
+    }
+
+private:
+    vector3<double> albedo;
 };
 
 

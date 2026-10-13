@@ -24,8 +24,14 @@ class camera
         }
         camera() =default;
         
-        Ray get_ray(const double& u,const double& v)const{return Ray(look_from,left_down_corner + vertical*u + horizontal*v);}
-        vector3<double> get_coordinate(const double& u,const double& v){return left_down_corner + vertical*u+horizontal*v;}
+        Ray get_ray(const double& u,const double& v)const
+        {
+            return Ray(look_from, get_coordinate(u, v) - look_from);
+        }
+        vector3<double> get_coordinate(const double& u,const double& v)const
+        {
+            return left_down_corner + horizontal*u + vertical*v;
+        }
         vector3<double> look_FR()const{return look_from;}
   
     private:    

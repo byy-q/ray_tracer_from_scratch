@@ -4,6 +4,7 @@
 #include "../data_structure/vector.hpp"
 namespace Ray_tracer
 {
+enum light_type{POINT,PARALELL};
 class light
 {
     public:
@@ -11,7 +12,7 @@ class light
         virtual ~light() = default;
         virtual color get_color()const = 0;
         virtual Ray get_ray(const vector3<double>& p)const = 0;
-
+        virtual light_type Light_Type()const = 0;
 };
 
 
@@ -26,6 +27,7 @@ class point_light : public light
         virtual Ray get_ray(const vector3<double>& p)const override{
             return Ray(p,light_point-p);
         }
+        light_type Light_Type()const override{return light_type::POINT;}
     private:
         color __light_color = color(128,128,128);
         vector3<double> light_point = {0.0,0.0,0.0};
@@ -38,7 +40,9 @@ class parallel_light : public light
         parallel_light(const color& _co,const vector3<double>& dir):__light_color(_co),direction(dir){}
         ~parallel_light()=default;
         color get_color()const override{return __light_color;}
+
         Ray get_ray(const vector3<double>& coord)const override{return Ray(coord,direction);}
+        light_type Light_Type()const override{return light_type::PARALELL;}
     private:
         color __light_color;
         vector3<double> direction;

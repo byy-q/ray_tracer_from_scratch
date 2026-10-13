@@ -166,11 +166,54 @@ CMakeFiles/ray_tracer.dir/main.cpp.obj: E:\delicate_render\main.cpp \
  E:\delicate_render\data_structure/vector.hpp \
  E:\delicate_render\objects/objects.hpp \
  E:/delicate_render/data_structure/vector.hpp \
- E:\delicate_render\objects/sphere.hpp \
+ D:/programdata/MinGW/include/c++/13.2.0/memory \
+ D:/programdata/MinGW/include/c++/13.2.0/bits/stl_tempbuf.h \
+ D:/programdata/MinGW/include/c++/13.2.0/bits/stl_uninitialized.h \
+ D:/programdata/MinGW/include/c++/13.2.0/bits/stl_raw_storage_iter.h \
+ D:/programdata/MinGW/include/c++/13.2.0/bits/align.h \
+ D:/programdata/MinGW/include/c++/13.2.0/bits/unique_ptr.h \
+ D:/programdata/MinGW/include/c++/13.2.0/bits/shared_ptr.h \
+ D:/programdata/MinGW/include/c++/13.2.0/bits/shared_ptr_base.h \
+ D:/programdata/MinGW/include/c++/13.2.0/bits/allocated_ptr.h \
+ D:/programdata/MinGW/include/c++/13.2.0/ext/aligned_buffer.h \
+ D:/programdata/MinGW/include/c++/13.2.0/ext/concurrence.h \
+ D:/programdata/MinGW/include/c++/13.2.0/bits/shared_ptr_atomic.h \
+ D:/programdata/MinGW/include/c++/13.2.0/bits/atomic_base.h \
+ D:/programdata/MinGW/include/c++/13.2.0/bits/atomic_lockfree_defines.h \
+ D:/programdata/MinGW/include/c++/13.2.0/backward/auto_ptr.h \
+ D:/programdata/MinGW/include/c++/13.2.0/pstl/glue_memory_defs.h \
+ D:/programdata/MinGW/include/c++/13.2.0/pstl/execution_defs.h \
+ E:/delicate_render/material/material.hpp \
+ E:/delicate_render/data_structure/vector.hpp \
+ E:/delicate_render/random.hpp \
+ D:/programdata/MinGW/include/c++/13.2.0/random \
+ D:/programdata/MinGW/include/c++/13.2.0/bits/random.h \
+ D:/programdata/MinGW/include/c++/13.2.0/vector \
+ D:/programdata/MinGW/include/c++/13.2.0/bits/stl_vector.h \
+ D:/programdata/MinGW/include/c++/13.2.0/bits/stl_bvector.h \
+ D:/programdata/MinGW/include/c++/13.2.0/bits/vector.tcc \
+ D:/programdata/MinGW/include/c++/13.2.0/bits/uniform_int_dist.h \
+ D:/programdata/MinGW/include/c++/13.2.0/x86_64-w64-mingw32/bits/opt_random.h \
+ D:/programdata/MinGW/include/c++/13.2.0/bits/random.tcc \
+ D:/programdata/MinGW/include/c++/13.2.0/numeric \
+ D:/programdata/MinGW/include/c++/13.2.0/bits/stl_numeric.h \
+ D:/programdata/MinGW/include/c++/13.2.0/pstl/glue_numeric_defs.h \
+ E:/delicate_render/hit_record.hpp \
+ E:/delicate_render/data_structure/vector.hpp \
+ E:/delicate_render/hit_record.hpp E:\delicate_render\objects/sphere.hpp \
  E:/delicate_render/data_structure/camera.hpp \
  E:\delicate_render\objects/objects.hpp \
+ E:\delicate_render\objects/wall.hpp \
+ D:/programdata/MinGW/include/c++/13.2.0/algorithm \
+ D:/programdata/MinGW/include/c++/13.2.0/bits/stl_algo.h \
+ D:/programdata/MinGW/include/c++/13.2.0/bits/algorithmfwd.h \
+ D:/programdata/MinGW/include/c++/13.2.0/bits/stl_heap.h \
+ D:/programdata/MinGW/include/c++/13.2.0/pstl/glue_algorithm_defs.h \
  D:/programdata/MinGW/include/c++/13.2.0/fstream \
  D:/programdata/MinGW/include/c++/13.2.0/bits/codecvt.h \
  D:/programdata/MinGW/include/c++/13.2.0/x86_64-w64-mingw32/bits/basic_file.h \
  D:/programdata/MinGW/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++io.h \
- D:/programdata/MinGW/include/c++/13.2.0/bits/fstream.tcc
+ D:/programdata/MinGW/include/c++/13.2.0/bits/fstream.tcc \
+ E:\delicate_render\light_source/light.hpp \
+ E:/delicate_render/data_structure/vector.hpp \
+ E:\delicate_render\random.hpp

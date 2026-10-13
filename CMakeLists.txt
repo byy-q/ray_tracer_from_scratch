@@ -11,6 +11,7 @@ add_executable(ray_tracer
     material/material.hpp
     objects/objects.hpp
     objects/sphere.hpp
+    objects/wall.hpp
     random.hpp
 )
 
