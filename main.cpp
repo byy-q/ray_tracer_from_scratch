@@ -24,7 +24,7 @@ Ray_tracer::vector3(0.0,1.0,0.0),2,30.0*3.14159265358979323846/180.0,
 static_cast<double>(__nx)/__ny);
 
 Ray_tracer::objects* list[4];
-Ray_tracer::envir_light global_light({42,42,42});
+Ray_tracer::envir_light global_light({42,34,30});
 Ray_tracer::light* light_source[2];
 
 
@@ -63,9 +63,9 @@ Ray_tracer::color __color_of_ray(const Ray_tracer::Ray __ray,Ray_tracer::objects
         const vector3<double> direction = make_unit(__ray.__Direction());
         const double blend = 0.5 * (direction.__Y() + 1.0);
         return color(
-            static_cast<std::uint8_t>(178.0 + blend * (105.0 - 178.0)),
-            static_cast<std::uint8_t>(218.0 + blend * (177.0 - 218.0)),
-            static_cast<std::uint8_t>(238.0 + blend * (232.0 - 238.0))
+            static_cast<std::uint8_t>(255.0 + blend * (92.0 - 255.0)),
+            static_cast<std::uint8_t>(150.0 + blend * (55.0 - 150.0)),
+            static_cast<std::uint8_t>(76.0 + blend * (125.0 - 76.0))
         );
     }
     //now the hit_record __hitting contains the nearest point's infomation
@@ -223,10 +223,10 @@ int main()
     list[3] = new Ray_tracer::wall(
         Ray_tracer::vector3(0.0,-6.0,0.0),
         Ray_tracer::vector3(0.0,1.0,0.0),
-        new Ray_tracer::lambertian({0.68,0.68,0.68})
+        new Ray_tracer::lambertian({0.58,0.32,0.16})
     );
 
-    light_source[0] = new Ray_tracer::point_light({150,135,120},{2.0,14.0,14.0});
+    light_source[0] = new Ray_tracer::point_light({190,135,95},{2.0,14.0,14.0});
     light_source[1] = new Ray_tracer::parallel_light({28,32,45},{-1.0,2.0,1.0});
 
 
